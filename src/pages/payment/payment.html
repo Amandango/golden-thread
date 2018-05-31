@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header no-lines>
+      NEW PAYMENT METHOD
+    </ion-list-header>
+    <ion-item class="input" id="cardname">
+      <ion-input type="text" placeholder="Name on Card" [(ngModel)]="nameoncard"></ion-input>
+    </ion-item>
+    <ion-item class="input" id="cardnumber">
+      <ion-input type="number" placeholder="Card Number" [(ngModel)]="cardnumber"></ion-input>
+    </ion-item>
+    <ion-item class="input" id="expirydate">
+      <ion-input type="text" placeholder="Expiry Date"onfocus="(this.type='date')" onblur="(this.type='text')" [(ngModel)]="expirydate"></ion-input>
+    </ion-item>
+    <ion-item class="input" id="securitycode">
+      <ion-input type="number" placeholder="Security Code" [(ngModel)]="securitycode"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-lines style="margin-top: 40px;">
+    <ion-list-header no-lines>
+      SELECT AMOUNT
+    </ion-list-header>
+    <ion-item class="amount">
+        <ion-input type ="number" placeholder="$0"[(ngModel)]="amount"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+      <ion-label>Frequency</ion-label>
+      <ion-select [(ngModel)]="frequency">
+        <ion-option value="once">Just this once</ion-option>
+        <ion-option value="monthly">Every month</ion-option>
+      </ion-select>
+  </ion-item>
+
+  {{charity}}
+
+  <button ion-button class="bigbutton" (click)="presentConfirm()">Submit</button>
+</ion-content>

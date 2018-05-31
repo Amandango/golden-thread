@@ -1,0 +1,31 @@
+page-home {
+
+    .appname {
+        font-family: 'Grand Hotel', cursive;
+        font-size: 70px;
+        color: white;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .bigbutton {
+        background-color: white;
+    }
+
+    .bigbutton:hover {
+        background-color: lightgrey;
+    }
+
+    .content     {
+        background-color: #F5B433;
+    }
+
+    .allbuttons {
+        margin-top: 150px;
+    }
+
+    #charities {
+        margin-top: 20px;
+    }
+
+}

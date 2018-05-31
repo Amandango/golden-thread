@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header>Charities</ion-list-header>
+  <ion-item *ngFor="let charityinst of charities" (click)="navigateToCharity(charityinst)">
+    {{charityinst.name}}
+  </ion-item>
+</ion-content>

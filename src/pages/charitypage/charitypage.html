@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img class="logo"src={{charity.logo}}>
+  <h4 class="name">{{charity.name}}</h4>
+
+  <ion-card class="aboutcard">
+    <ion-card-content>
+      <h5>About</h5>
+      <p> {{charity.description}}</p>
+      <br>
+      <h5>Donation Ask</h5>
+      <p>{{charity.amount}}</p>
+    </ion-card-content>
+  </ion-card>
+  
+  
+
+  <button ion-button class="bigbutton" (click)="navigateToPayments()">Donate Now </button>
+</ion-content>

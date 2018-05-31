@@ -1,0 +1,47 @@
+<!--
+  Generated template for the RegistrationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 class="title">Sign Up</h1>
+  <ion-list class="signin">
+    <ion-item class="input" id="username">
+      <ion-input type="text" placeholder="Username or Email" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="name">
+        <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="surname">
+      <ion-input type="text" placeholder="Surname" [(ngModel)]="surname"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="email">
+      <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="password">
+      <ion-input type="text" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="repeatpassword">
+      <ion-input type="text" placeholder="Repeat Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  
+  <div class="signinbuttons">
+    <button class="bigbutton" ion-button (click)="navigateToProfile()">Submit</button>
+  </div>
+</ion-content>

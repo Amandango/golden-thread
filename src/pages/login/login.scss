@@ -1,0 +1,26 @@
+page-login {
+    .signin {
+        margin-top: 40px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .title {
+        font-family: 'Raleway', sans-serif;
+        margin-left: 5%;
+        font-size: 65px;
+    }
+
+    .signinbuttons {
+        display: block;
+        margin-top: 60px;
+    }
+
+    .bigbutton {
+        color: white;
+    }
+
+    .bigbutton:hover {
+        background-color: white;
+    }
+}

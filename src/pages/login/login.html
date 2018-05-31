@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1 class="title">Sign in</h1>
+  <ion-list class="signin">
+    <ion-item class="input" id="username">
+      <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item class="input" id="username">
+        <ion-input type="text" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <div class="signinbuttons">
+    <button class="bigbutton" ion-button (click)="navigateToProfile()">Sign in</button>
+  </div>
+</ion-content>
