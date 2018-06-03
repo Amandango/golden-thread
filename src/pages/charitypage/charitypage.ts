@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Charity } from '../../models/charity';
 import { PaymentPage } from '../../pages/payment/payment';
+import { User } from '../../models/user';
 
 /**
  * Generated class for the CharitypagePage page.
@@ -17,9 +18,10 @@ import { PaymentPage } from '../../pages/payment/payment';
 export class CharitypagePage {
 
   public charity: Charity;
+  public user: User=new User();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+    this.user = this.navParams.get("user");
     this.charity=this.navParams.get("charityparam");
   }
 
@@ -28,7 +30,9 @@ export class CharitypagePage {
   }
 
   navigateToPayments() {
-    this.navCtrl.push(PaymentPage);
+    this.navCtrl.push(PaymentPage, {
+      user: this.user
+    });
   }
 
 

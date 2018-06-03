@@ -11,7 +11,7 @@
     <img class="profilepicimg" src="assets/imgs/profilepic.jpeg">
   </div>
 
-  <h2 class="name">{{username}}</h2>
+  <h2 class="name">{{user.username}}</h2>
   <div class="parent">
     <div class="topbuttons">
       <button ion-button (click)="navigateToCharities()" class="buttongreen">
@@ -21,7 +21,7 @@
     </div>
   </div>
   <super-tabs>
-    <super-tab [root]="tab1Root" title="Profile"></super-tab>
+    <super-tab [root]="tab1Root" [rootParams]="chatParams" title="Profile"></super-tab>
     <super-tab [root]="tab2Root" title="Donations"></super-tab>
   </super-tabs>
 

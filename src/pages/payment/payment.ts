@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { Charity } from '../../models/charity';
 import { TabPage } from '../tab/tab';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'page-payment',
@@ -12,12 +13,14 @@ import { TabPage } from '../tab/tab';
 export class PaymentPage {
 
   public amount: string;
+  public user: User = new User();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaymentPage');
+    this.user = this.navParams.get("user");
   }
 
   presentConfirm() {
@@ -35,7 +38,9 @@ export class PaymentPage {
         {
           text: 'Submit',
           handler: () => {
-            this.navCtrl.push(TabPage);
+            this.navCtrl.push(TabPage, {
+              user: this.user
+            });
           }
         }
       ]

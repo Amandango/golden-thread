@@ -4,6 +4,7 @@ import { LoginPage } from '../login/login';
 import { CharitylistPage } from '../charitylist/charitylist';
 import { ProfileinfoPage } from '../profileinfo/profileinfo';
 import { ProfilePage } from '../profile/profile';
+import { User } from '../../models/user';
 
 /**
  * Generated class for the TabPage page.
@@ -21,18 +22,27 @@ export class TabPage {
 
   tab1Root: any = ProfileinfoPage;
   tab2Root: any = ProfilePage;
-  public username: string;
+  public user: User = new User();
+
+  chatParams = {
+    user1: 'admin',
+    user2: 'ionic'
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get("user");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabPage');
-    this.username=this.navParams.get("username");
+    this.user=this.navParams.get("user");
+    console.log(this.user);
   }
 
   navigateToCharities() {
-    this.navCtrl.push(CharitylistPage);
+    this.navCtrl.push(CharitylistPage, {
+      user: this.user
+    });
   }
 
   popToRoot() {

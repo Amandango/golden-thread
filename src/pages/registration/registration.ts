@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { TabPage } from '../tab/tab';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'page-registration',
@@ -10,6 +11,7 @@ import { TabPage } from '../tab/tab';
 export class RegistrationPage {
 
   public username: string;
+  public user: User= new User();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -20,7 +22,7 @@ export class RegistrationPage {
 
   navigateToProfile() {
     this.navCtrl.push(TabPage, {
-      username: this.username
+      user: this.user
     });
   }
 

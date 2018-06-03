@@ -4,6 +4,7 @@ import { Chart } from 'chart.js';
 import { CharitylistPage } from '../charitylist/charitylist';
 import { Charity } from '../../models/charity';
 import { LoginPage } from '../../pages/login/login';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'page-profile',
@@ -13,6 +14,7 @@ import { LoginPage } from '../../pages/login/login';
 export class ProfilePage {
 
     public username: string;
+    public user: User = new User();
 
     @ViewChild('doughnutCanvas') doughnutCanvas;
  
@@ -23,7 +25,7 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
-    this.username = this.navParams.get("username");
+    this.user = this.navParams.get("user");
     
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
  
@@ -52,7 +54,10 @@ export class ProfilePage {
 }
 
   navigateToCharities() {
-    this.navCtrl.push(CharitylistPage);
+    alert(this.user.username);
+    this.navCtrl.push(CharitylistPage, {
+      user: this.user
+    });
   }
 
 }
