@@ -15,6 +15,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { PaymentPage } from '../pages/payment/payment';
 import { TabPage } from '../pages/tab/tab';
 import { ProfileinfoPage } from '../pages/profileinfo/profileinfo';
+import { SettingsPage } from '../pages/settings/settings';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProfileinfoPage } from '../pages/profileinfo/profileinfo';
     ProfilePage,
     PaymentPage,
     TabPage, 
-    ProfileinfoPage
+    ProfileinfoPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { ProfileinfoPage } from '../pages/profileinfo/profileinfo';
     ProfilePage,
     PaymentPage,
     TabPage,
-    ProfileinfoPage
+    ProfileinfoPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,

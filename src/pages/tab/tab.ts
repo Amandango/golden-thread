@@ -5,6 +5,7 @@ import { CharitylistPage } from '../charitylist/charitylist';
 import { ProfileinfoPage } from '../profileinfo/profileinfo';
 import { ProfilePage } from '../profile/profile';
 import { User } from '../../models/user';
+import { SettingsPage } from '../settings/settings';
 
 /**
  * Generated class for the TabPage page.
@@ -45,8 +46,10 @@ export class TabPage {
     });
   }
 
-  popToRoot() {
-    this.navCtrl.popToRoot();
+  navigateToSettings() {
+    this.navCtrl.push(SettingsPage, {
+      user: this.user
+    });
   }
 
 }

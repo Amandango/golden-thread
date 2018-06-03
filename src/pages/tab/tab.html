@@ -16,7 +16,7 @@
     <div class="topbuttons">
       <button ion-button (click)="navigateToCharities()" class="buttongreen">
         <ion-icon name="search"></ion-icon>&nbsp;Search All Charities</button>
-      <button ion-button class="buttongreen">
+      <button ion-button (click)="navigateToSettings()" class="buttongreen">
         <ion-icon name="cog"></ion-icon>&nbsp;Settings</button>
     </div>
   </div>
@@ -24,6 +24,4 @@
     <super-tab [root]="tab1Root" [rootParams]="chatParams" title="Profile"></super-tab>
     <super-tab [root]="tab2Root" title="Donations"></super-tab>
   </super-tabs>
-
-  <button ion-button class="logout" (click)="popToRoot()">Logout</button>
 </ion-content>
