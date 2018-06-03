@@ -28,14 +28,14 @@ export class CharitylistPage {
     charity1.id = 1;
     charity1.name = "African Children's Feeding Scheme";
     charity1.description = "Feeding children";
-    charity1.logo = "assets/imgs/ACFSlogo.jpg";
+    charity1.logo = "assets/ACFSlogo.jpg";
     charity1.amount = "$5000"
 
     var charity2 = new Charity();
     charity2.id = 2;
     charity2.name = "Alzheimer's South Africa";
     charity2.description = "Stopping Alzheimer's";
-    charity2.logo = "assets/imgs/alzheimerlogo.png";
+    charity2.logo = "assets/alzheimerlogo.png";
     charity2.amount = "$100,000"
 
     this.charities.push(charity1);
